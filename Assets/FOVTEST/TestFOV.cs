@@ -57,8 +57,7 @@ public class TestFOV : MonoBehaviour
         //FindVisibleTargets();
         if(spotted)
         {
-            //GetComponent<AIControl>().playerSpotted = true;
-            //StartCoroutine(WaitTime(0.2f, spotted));
+            // Activate whatever you want in here
         }
         
     }
