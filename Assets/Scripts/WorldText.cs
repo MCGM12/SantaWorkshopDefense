@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*public class WorldText : MonoBehaviour
+public class WorldText : MonoBehaviour
 {
     // Create Text in the world
-  public static TextMesh CreateWorldText (Transform parent = null, string text, Vector3 localPosition = default, int fontSize = 40, Color color, 
-        TextAnchor textAnchor = TextAnchor.UpperLeft, TextAlignment textAlignment = TextAlignment.Left, int sortingOrder = 5000)
+  public static TextMesh CreateWorldText (string text, Color color, Transform parent = null,  Vector3 localPosition = default, int fontSize = 40,
+        TextAnchor textAnchor = TextAnchor.MiddleCenter, TextAlignment textAlignment = TextAlignment.Left, int sortingOrder = 5000)
     {
         GameObject gameObject = new GameObject("world_Text",typeof(TextMesh));
         Transform transform = gameObject.transform;
@@ -24,4 +24,4 @@ using UnityEngine.UI;
 
     }
     
-}*/
+}
