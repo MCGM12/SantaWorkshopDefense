@@ -15,7 +15,7 @@ public class mousePos : MonoBehaviour
         return GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
 
     }
-    public static Vector3 GetMouseWorldPositionWithZ(Camera worldCamera)
+    public static Vector3 GetMouseWorldPositionWithZ(Camera worldCamera )
     {
 
         return GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);

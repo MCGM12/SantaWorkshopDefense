@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
-    private Grid grid;
+    public Grid grid;
 
-    private void Start()
+    public void Start()
     {
       
-       grid = new Grid(20, 20, 10f, new Vector3(0,0));
+       grid = new Grid(4, 3, 10f, new Vector3(-30, -19));
     }
 
-    private void Update()
+   public void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
