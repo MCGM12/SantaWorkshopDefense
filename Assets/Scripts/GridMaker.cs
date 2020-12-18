@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Testing : MonoBehaviour
+public class GridMaker : MonoBehaviour
 {
     public Grid grid;
 
     public void Start()
     {
       
-       grid = new Grid(4, 3, 10f, new Vector3(-30, -19));
+       grid = new Grid(8, 6, 5, new Vector3(-31, -19));
     }
 
    public void Update()
