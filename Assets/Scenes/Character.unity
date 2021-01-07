@@ -349,6 +349,16 @@ PrefabInstance:
       propertyPath: pivot
       value: 
       objectReference: {fileID: 553845961}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: NextTimeToShoot
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8299772960897556014, guid: 77e6f07e1737bfa4a8ae10109286282c,
         type: 3}
       propertyPath: m_SortingOrder
@@ -464,7 +474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076631804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.32, y: -12.05, z: -28.885979}
+  m_LocalPosition: {x: -23.37, y: -1.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2096958227}
@@ -483,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fb1b3e4b07ed9439613197b90b6ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemihealth: 20
+  Enemihealth: 500
 --- !u!1 &2096958226
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096958226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.31, y: 2.03, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2076631805}
