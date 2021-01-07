@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4352334328084523416}
   - component: {fileID: 4352334328084523419}
   - component: {fileID: 4352334328084523418}
+  - component: {fileID: 6831600181066885054}
   m_Layer: 0
   m_Name: Basic Runner
   m_TagString: Untagged
@@ -240,6 +241,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &6831600181066885054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4352334328084523397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb1b3e4b07ed9439613197b90b6ec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemihealth: 4
 --- !u!1 &6958777633816126396
 GameObject:
   m_ObjectHideFlags: 0
