@@ -81,7 +81,7 @@ public class TestFOV : MonoBehaviour
                 if(!Physics2D.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))
                 {
                     visibleTargets.Add(target);
-                    Debug.Log("player spotted");
+                    Debug.Log("target(FOV) spotted");
                     spotted = true;
                 } 
             }

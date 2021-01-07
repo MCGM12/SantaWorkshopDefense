@@ -26,7 +26,7 @@ public class RunnerAttack : MonoBehaviour
 
         if (Vector2.Distance(this.transform.position, closestEnemy.transform.position) < 10)
         {
-            Debug.Log("Elf Tower in sight. Sending an Alma.");
+            Debug.Log("Elf Tower in sight.");
             shoot1 = true;
         }
 
