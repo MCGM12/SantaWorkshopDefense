@@ -396,6 +396,17 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2105688741}
+    - target: {fileID: 4352334328084523419, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: enableRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352334328084523420, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2532914999992945341, guid: 27d63b8c394584543b140af88dcf7bb2,
+        type: 3}
     - target: {fileID: 4352334328084523421, guid: 17741f8951b1f5945b91d68f3cffd51c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -450,6 +461,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352334328084523422, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352334328084523422, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352334328084523423, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352334328084523423, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17741f8951b1f5945b91d68f3cffd51c, type: 3}
