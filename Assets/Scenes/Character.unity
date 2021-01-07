@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &553845961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6238114703429928275, guid: 77e6f07e1737bfa4a8ae10109286282c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027358594}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &951698694 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6704751650899797941, guid: 77e6f07e1737bfa4a8ae10109286282c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027358594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &973398490
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,6 +264,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6238114703511700246, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6238114703646158409, guid: 77e6f07e1737bfa4a8ae10109286282c,
         type: 3}
       propertyPath: m_Name
@@ -311,6 +328,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: currentTarget
+      value: 
+      objectReference: {fileID: 2076631804}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: TimeBetweenShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: barrel
+      value: 
+      objectReference: {fileID: 951698694}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: pivot
+      value: 
+      objectReference: {fileID: 553845961}
+    - target: {fileID: 8299772960897556014, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e6f07e1737bfa4a8ae10109286282c, type: 3}
