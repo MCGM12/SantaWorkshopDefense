@@ -26,9 +26,7 @@ public class TestFOV : MonoBehaviour
 
 
     private void Start()
-    {
-
-        
+    {  
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
