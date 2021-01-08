@@ -34,12 +34,13 @@ public class SnowballTower : MonoBehaviour
         if (distance <= range)
         {
             currentTarget = CurrentNearestEnemy;
+            Debug.Log("FOUnd YOu");
         }
         else
         {
             currentTarget = null; 
         }
-        Debug.Log("FOUnd YOu");
+        
     }
    protected virtual void Shoot()
     {
