@@ -42,8 +42,16 @@ public class RunnerAttack : MonoBehaviour
         shoot3 = shoot1;
             if (shoot3)
             {
-                GameObject newProj = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 0));
-                newProj.transform.position = Vector2.MoveTowards(newProj.transform.position, closestEnemy.transform.position, 20);
+            GameObject newProj = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 0));
+            //newProj.transform.position = Vector2.MoveTowards(newProj.transform.position, closestEnemy.transform.position, 5);
+            //newProj.GetComponent<Rigidbody2D>().AddForce(Vector2.MoveTowards(newProj.transform.position, closestEnemy.transform.position, 10));
+            Rigidbody2D rb = newProj.GetComponent<Rigidbody2D>();
+            
+
+            rb.velocity = (closestEnemy.transform.position - transform.position).normalized * 5;
+            
+
+            Destroy(newProj, 3);
 
             }
         
