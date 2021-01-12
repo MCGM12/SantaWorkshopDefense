@@ -517,6 +517,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: range
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238114703646158415, guid: 77e6f07e1737bfa4a8ae10109286282c,
+        type: 3}
+      propertyPath: TimeBetweenShots
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e6f07e1737bfa4a8ae10109286282c, type: 3}
 --- !u!1 &1219912670
@@ -789,6 +799,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Runner
       objectReference: {fileID: 0}
+    - target: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4352334328084523418, guid: 17741f8951b1f5945b91d68f3cffd51c,
         type: 3}
       propertyPath: target
@@ -853,6 +868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831600181066885054, guid: 17741f8951b1f5945b91d68f3cffd51c,
+        type: 3}
+      propertyPath: Enemihealth
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17741f8951b1f5945b91d68f3cffd51c, type: 3}
