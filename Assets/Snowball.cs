@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Snowball : MonoBehaviour
 {
+    Rigidbody2D rb2;
     private void Start()
     {
         Destroy(gameObject, 3f);
@@ -15,7 +16,11 @@ public class Snowball : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (rb2.bodyType == RigidbodyType2D.Static && tag == "projectile")
+        {
+            rb2.bodyType = RigidbodyType2D.Dynamic;
+            rb2.gravityScale = 0;
+        }
         //transform.position += transform.right * 0.25f;
 
         //Debug.Log("KOBE");

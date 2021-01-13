@@ -10,11 +10,13 @@ public class RunnerAttack : MonoBehaviour
     public bool shoot1, shoot2, shoot3; //shoot1 is distance req, shoot2 is timer req, and shoot3 is if all reqs are satisfied
     private GameObject closest;
     public Transform target;
+    public float timeLeft = 2f;
    
 
     public void Start()
     {
         projSpeed = 2f;
+        shoot2 = true;
     }
     public void Update()
     {
@@ -23,14 +25,22 @@ public class RunnerAttack : MonoBehaviour
         closestEnemy = closest;
         target = closestEnemy.transform;
 
-
+        timeLeft -= Time.deltaTime;
+        if (timeLeft < 0)
+        {
+            shoot2 = true;
+        } 
+        if (timeLeft < 0 && shoot2 == false)
+        {
+            timeLeft = 2f;
+        }
 
 
         if (Vector2.Distance(this.transform.position, closestEnemy.transform.position) < 10)
         {
             Debug.Log("Elf Tower in sight.");
             shoot1 = true;
-            RotateTowards(target.position);
+            //RotateTowards(target.position);
         } else
         {
             shoot1 = false;
@@ -39,22 +49,23 @@ public class RunnerAttack : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(Vector3.zero);
         }
-        shoot3 = shoot1;
-            if (shoot3)
-            {
+        //shoot3 = shoot1;
+        if (shoot1 && shoot2)
+        {
             GameObject newProj = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 0));
-            //newProj.transform.position = Vector2.MoveTowards(newProj.transform.position, closestEnemy.transform.position, 5);
-            //newProj.GetComponent<Rigidbody2D>().AddForce(Vector2.MoveTowards(newProj.transform.position, closestEnemy.transform.position, 10));
             Rigidbody2D rb = newProj.GetComponent<Rigidbody2D>();
-            
-
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 0;
+            rb.tag = "Projectile";
             rb.velocity = (closestEnemy.transform.position - transform.position).normalized * 5;
-            
-
             Destroy(newProj, 3);
-
-            }
-        
+            shoot2 = false;
+            
+        }
+        //if(shoot2 == false)
+        //{
+        //    StartCoroutine(Timer(1.5f, shoot2));
+        //}
     }
 
     public GameObject FindClosestEnemy()
@@ -82,5 +93,11 @@ public class RunnerAttack : MonoBehaviour
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
+    }
+
+    public IEnumerator Timer(float time, bool change)
+    {
+        yield return new WaitForSeconds(time);
+        change = true;
     }
 }
