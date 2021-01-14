@@ -11,10 +11,12 @@ public class RunnerAttack : MonoBehaviour
     private GameObject closest;
     public Transform target;
     public float timeLeft = 2f;
+    [SerializeField] private float range;
    
 
     public void Start()
     {
+        range = 6f;
         projSpeed = 2f;
         shoot2 = false;
     }
@@ -53,7 +55,7 @@ public class RunnerAttack : MonoBehaviour
         //}
 
 
-        if (Vector2.Distance(this.transform.position, closestEnemy.transform.position) < 10)
+        if (Vector2.Distance(this.transform.position, closestEnemy.transform.position) < range)
         {
             Debug.Log("Elf Tower in sight.");
             shoot1 = true;
