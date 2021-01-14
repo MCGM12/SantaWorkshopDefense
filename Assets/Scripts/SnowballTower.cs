@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SnowballTower : MonoBehaviour
 {
-    [SerializeField]  private float range;
-   [SerializeField] private float damage;
+    [SerializeField] private float range;
+    [SerializeField] private float damage;
     [SerializeField] private float TimeBetweenShots; //How long it takes to shot and to shoot again 
-    [SerializeField ]private float NextTimeToShoot;
+    [SerializeField] private float NextTimeToShoot;
 
     public GameObject currentTarget;
     private void Start()
@@ -34,7 +34,7 @@ public class SnowballTower : MonoBehaviour
         if (distance <= range)
         {
             currentTarget = CurrentNearestEnemy;
-            Debug.Log("FOUnd YOu");
+            Debug.Log("Enemy(Runner) spotted");
         }
         else
         {

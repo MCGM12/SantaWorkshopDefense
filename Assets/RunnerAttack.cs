@@ -7,7 +7,7 @@ public class RunnerAttack : MonoBehaviour
     public float projSpeed;
     public GameObject projectile;
     public GameObject closestEnemy;
-    public bool shoot1, shoot2, shoot3; //shoot1 is distance req, shoot2 is timer req, and shoot3 is if all reqs are satisfied
+    public bool shoot1, shoot2; //shoot1 is distance req & shoot2 is timer req
     private GameObject closest;
     public Transform target;
     public float timeLeft = 2f;
@@ -16,24 +16,41 @@ public class RunnerAttack : MonoBehaviour
     public void Start()
     {
         projSpeed = 2f;
-        shoot2 = true;
+        shoot2 = false;
     }
-    public void Update()
+    public void FixedUpdate()
     {
         closestEnemy = closest;
         FindClosestEnemy();
-        closestEnemy = closest;
+
         target = closestEnemy.transform;
 
-        timeLeft -= Time.deltaTime;
-        if (timeLeft < 0)
+        //Timer Stuffs
+
+        if(shoot2 == false)
+        {
+            timeLeft -= Time.deltaTime;
+        }
+        if(timeLeft <= 0)
         {
             shoot2 = true;
-        } 
-        if (timeLeft < 0 && shoot2 == false)
-        {
-            timeLeft = 2f;
+            if(shoot2)
+            {
+                timeLeft = 2f;
+            }
         }
+
+
+
+        //timeLeft -= Time.deltaTime;
+        //if (timeLeft < 0)
+        //{
+        //    shoot2 = true;
+        //} 
+        //if (timeLeft < 0 && shoot2 == false)
+        //{
+        //    timeLeft = 2f;
+        //}
 
 
         if (Vector2.Distance(this.transform.position, closestEnemy.transform.position) < 10)
@@ -45,12 +62,13 @@ public class RunnerAttack : MonoBehaviour
         {
             shoot1 = false;
         }
+
         if (gos.Length <= 0)
         {
             transform.rotation = Quaternion.Euler(Vector3.zero);
         }
-        //shoot3 = shoot1;
-        if (shoot1 && shoot2)
+
+        if (shoot1 == true && shoot2 == true)
         {
             GameObject newProj = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 0));
             Rigidbody2D rb = newProj.GetComponent<Rigidbody2D>();
