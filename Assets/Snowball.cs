@@ -7,7 +7,7 @@ public class Snowball : MonoBehaviour
     Rigidbody2D rb2;
     private void Start()
     {
-        Destroy(gameObject, 3f);
+        //Destroy(gameObject, 3f);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
