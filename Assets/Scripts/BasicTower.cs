@@ -14,6 +14,6 @@ public class BasicTower : SnowballTower
         GameObject newSnowball = Instantiate(Snowball,barrel.position,pivot.rotation);
         
 
-        Debug.Log("Shoot");
+        //Debug.Log("Shoot");
     }
 }
