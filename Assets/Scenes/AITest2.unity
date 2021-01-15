@@ -424,6 +424,31 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1080710372}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &893288636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893288635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d97e7cca3309a24fa8cb371ca4c2295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 7.5
+  viewAngle: 360
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visibleTargets: []
+  pT: {fileID: 0}
+  meshResolution: 0
+  spotted: 0
+  viewMeshFilter: {fileID: 0}
 --- !u!61 &893288640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -450,6 +475,59 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.991831, y: 2.7428513}
   m_EdgeRadius: 0
+--- !u!1 &908868648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6903628048351894075, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1835107104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &908868649
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908868648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &908868650
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908868648}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1080710372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,6 +690,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1835107104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3836886722568071547, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21698111
+      objectReference: {fileID: 0}
+    - target: {fileID: 3836886722568071547, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.16068885
+      objectReference: {fileID: 0}
+    - target: {fileID: 3836886722568071547, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.16068885
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903628048351894075, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_Name
+      value: SnowBallFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08e413f4ce8c7f469aa056b96f1c8f8, type: 3}
 --- !u!1 &2105688740
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,8 +1062,9 @@ MonoBehaviour:
   closestEnemy: {fileID: 0}
   shoot1: 0
   shoot2: 0
-  shoot3: 0
   target: {fileID: 0}
+  timeLeft: 2
+  range: 0
 --- !u!114 &4352334328765960085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,8 +1077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d97e7cca3309a24fa8cb371ca4c2295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 7.5
-  viewAngle: 180
+  viewRadius: 6
+  viewAngle: 90
   targetMask:
     serializedVersion: 2
     m_Bits: 512
