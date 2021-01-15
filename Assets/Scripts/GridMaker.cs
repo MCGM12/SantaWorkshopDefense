@@ -9,7 +9,7 @@ public class GridMaker : MonoBehaviour
     public void Start()
     {
       
-       grid = new Grid(8, 6, 5, new Vector3(-31, -19));
+       grid = new Grid(8, 5, 5, new Vector3(-20 , -11));
     }
 
    public void Update()
