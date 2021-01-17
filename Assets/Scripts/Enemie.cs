@@ -20,7 +20,7 @@ public class Enemie : MonoBehaviour
         {
             die("Enemy");
         }
-        Debug.Log("owww");
+        //Debug.Log("owww");
     }
     private void die( string destroyTag)
     {

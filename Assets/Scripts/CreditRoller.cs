@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CreditRoller : MonoBehaviour
 {
-    private static int nScreens = 7;
-    private GameObject[] creditScreens = new GameObject[nScreens];
+    private static int nScreens = 5;
+    [SerializeField] private GameObject[] creditScreens = new GameObject[nScreens];
     private static int swapCount = 0;
 
 

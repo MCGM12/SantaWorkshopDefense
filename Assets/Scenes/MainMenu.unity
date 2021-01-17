@@ -384,9 +384,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Well, main menu art from Jonathan is nearly done. So take this placeholder
+  m_Text: "Well, main menu art from Jonathan is nearly done. So take this placeholder
     I guess. Andrew has towers nearly done but merigng earlier frigged this up. Gonna
-    get a working level in by tommorow hopefully after I resolve merge errors. '
+    get a working level in by tommorow hopefully after I resolve merge errors. \nNOTE:
+    PRESS ESCAPE TO COME BACK TO MAIN MENU"
 --- !u!222 &679330986
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -511,7 +512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257.17, y: -32}
+  m_AnchoredPosition: {x: 257.17, y: -39.191}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822993949

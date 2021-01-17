@@ -78,7 +78,8 @@ public class SnowballTower : MonoBehaviour
     {
         FindClosestEnemy();
         currentTarget = closest;
-        if(Time.time >= NextTimeToShoot)
+
+        if(Time.time >= NextTimeToShoot && Vector2.Distance(transform.position, currentTarget.transform.position) <= range)
         {
             if (currentTarget != null)
             {

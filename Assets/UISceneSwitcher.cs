@@ -7,7 +7,7 @@ public class UISceneSwitcher : MonoBehaviour
 {
     public void Credits()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("Credits");
     }
 
     public void Level()
@@ -15,4 +15,22 @@ public class UISceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("AITest2");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            MainMenu();
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+
+        }
+    }
 }
