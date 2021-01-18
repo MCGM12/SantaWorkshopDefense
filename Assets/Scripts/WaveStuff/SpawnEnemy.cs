@@ -55,6 +55,7 @@ public class SpawnEnemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         Instantiate(testEnemyPrefab).GetComponent<MoveEnemy>().waypoints = waypoints;
 
         lastSpawnTime = Time.time;

@@ -13,7 +13,7 @@ public class Enemie : MonoBehaviour
     private void Awake()
     {
         EnCount.enemies.Add(gameObject);
-        gameObject.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Target").transform;
+        //gameObject.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Target").transform;
     }
     public void takeDamage(float ammount)
     {

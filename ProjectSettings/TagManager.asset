@@ -8,6 +8,9 @@ TagManager:
   - WaveManager
   - Target
   - projectile
+  - GameManager
+  - Waypoint
+  - FinalWaypoint
   layers:
   - Default
   - TransparentFX
