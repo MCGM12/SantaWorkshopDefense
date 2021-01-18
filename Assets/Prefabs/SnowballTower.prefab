@@ -247,7 +247,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   pivot: {fileID: 6238114703429928275}
   barrel: {fileID: 6704751650899797941}
-  Snowball: {fileID: 6903628048351894075, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+  Snowball: {fileID: 1889625065112884833, guid: f047a3a4cd2f3074ab429fc6f8f2b892,
     type: 3}
 --- !u!114 &1088735426656445778
 MonoBehaviour:
