@@ -5,15 +5,18 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     Wave w1, w2, w3, w4, w5, w6, w7, w8, w9, w10;
-    public bool gameStart;
+    public bool gameStart, runnerDone, gumballDone, monsterDone, debugstartWave = false;
+    [SerializeField] private float runnerTimer, gumTimer, monsterTimer;
     Wave currentWave;
+
+    Transform spawn;
 
     private void Awake()
     {
         DefineWaves();
     }
 
-    void DefineWaves() //Open for like 90 lines of code, this is absurdly long bcus im dumb but we dont have time to make it better.
+    void DefineWaves() //Open for like 60 lines of code, this is absurdly long bcus im dumb but we dont have time to make it better... 
     {
         //Wave One
         w1.EnemyCount = 10;
@@ -52,12 +55,12 @@ public class WaveManager : MonoBehaviour
         //Wave Seven
         w7.EnemyCount = 90;
         w7.runnerCount = 65;
-        w7.gumballCount = w7.EnemyCount - w7.runnerCount;
+        w7.gumballCount = 25;
 
         //Wave Eight
         w8.EnemyCount = 120;
-        w8.runnerCount = w8.EnemyCount/4*3; Debug.Log("Wave 8 Runner Count is: " + w8.runnerCount);
-        w8.gumballCount = w8.EnemyCount - w8.runnerCount;
+        w8.runnerCount = 80;
+        w8.gumballCount = 40;
 
         //Wave Nine
         w9.monsterCount = 200;
@@ -120,6 +123,13 @@ public class WaveManager : MonoBehaviour
     {
 
         //Runner Spawn
+        if (RunnerCount > 0 && runnerDone == false)
+        {
+            StartCoroutine(RunnerSpawn(runnerTimer, Wave.runnerPreset, currentWave.runnerCount));
+        } else if (RunnerCount <= 0)
+        {
+            runnerDone = true;
+        }
 
         //Gumball Spawn
 
@@ -127,19 +137,31 @@ public class WaveManager : MonoBehaviour
     }
     void Start()
     {
-        
+        spawn = gameObject.transform;
     }
 
     
     void Update()
     {
-        if(gameStart)
+        if(debugstartWave)
         {
             StartWave(w1, w1.EnemyCount, w1.runnerCount, w1.gumballCount, w1.monsterCount);
         }
+        if(gameStart)
+        {
+            StartWave(w1, w1.EnemyCount, w1.runnerCount, w1.gumballCount, w1.monsterCount); //starts first wave
+        }
         if(currentWave.ended)
         {
-            WaveLogic();
+            WaveLogic(); //if wave is ended, run the logic to determine next
         }
+    }
+
+    IEnumerator RunnerSpawn(float delay, GameObject prefab, int reductable)
+    {
+        yield return new WaitForSeconds(delay/2);
+        Instantiate(prefab, spawn.position, Quaternion.Euler(0, 0, 0));
+        reductable--;
+
     }
 }

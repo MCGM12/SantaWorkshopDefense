@@ -348,9 +348,10 @@ GameObject:
   - component: {fileID: 556521918}
   - component: {fileID: 556521920}
   - component: {fileID: 556521919}
+  - component: {fileID: 556521921}
   m_Layer: 0
   m_Name: WaveManager
-  m_TagString: Untagged
+  m_TagString: WaveManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -385,6 +386,7 @@ MonoBehaviour:
   runnerCount: 0
   gumballCount: 0
   monsterCount: 0
+  ended: 0
 --- !u!114 &556521920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +399,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63f14dc09bee484b8e2c13810768c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStart: 0
+  runnerDone: 0
+  gumballDone: 0
+  monsterDone: 0
+  debugstartWave: 0
+  runnerTimer: 1
+  gumTimer: 1
+  monsterTimer: 1
+--- !u!114 &556521921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556521917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efbf0863099c37488e3d1f068af093b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runnerPrefab: {fileID: 0}
+  gumPrefab: {fileID: 0}
+  monsterPrefab: {fileID: 0}
 --- !u!1 &855257508
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour
 {
-    public static GameObject runnerPreset, gumballPreset, monsterPreset;
+    [SerializeField] public static GameObject runnerPreset, gumballPreset, monsterPreset;
     public static Transform origin;
     public static GameObject waveManager;
 

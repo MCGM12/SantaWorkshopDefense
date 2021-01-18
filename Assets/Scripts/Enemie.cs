@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemie : MonoBehaviour
 {
@@ -12,13 +13,14 @@ public class Enemie : MonoBehaviour
     private void Awake()
     {
         EnCount.enemies.Add(gameObject);
+        gameObject.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag("Target").transform;
     }
     public void takeDamage(float ammount)
     {
         Enemihealth -= ammount;
         if (Enemihealth <= 0)
         {
-            die("Enemy");
+            //die("Enemy");
         }
         //Debug.Log("owww");
     }
@@ -34,6 +36,7 @@ public class Enemie : MonoBehaviour
 
     private void Update()
     {
-        takeDamage(0);
+        //takeDamage(0);
+        
     }
 }
