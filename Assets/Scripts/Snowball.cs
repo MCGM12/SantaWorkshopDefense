@@ -21,9 +21,10 @@ public class Snowball : MonoBehaviour
             rb2.bodyType = RigidbodyType2D.Dynamic;
             rb2.gravityScale = 0;
         }
+       
         //transform.position += transform.right * 0.25f;
 
-        //Debug.Log("KOBE");
+        Debug.Log("KOBE");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,4 +34,6 @@ public class Snowball : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+  
 }
