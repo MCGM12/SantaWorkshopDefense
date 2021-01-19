@@ -32,3 +32,5 @@ public class PlayerSnowBall : MonoBehaviour
         Destroy(gameObject);
     }
 }
+
+
