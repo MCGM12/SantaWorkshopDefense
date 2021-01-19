@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3774706969913540102}
   m_Layer: 0
   m_Name: Basic Runner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +259,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2532914999992945341, guid: 27d63b8c394584543b140af88dcf7bb2,
+  m_Sprite: {fileID: -7177117440136523431, guid: 27d63b8c394584543b140af88dcf7bb2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
