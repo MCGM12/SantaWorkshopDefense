@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4352334328084523423}
   - component: {fileID: 4352334328084523422}
   - component: {fileID: 4352334328084523417}
-  - component: {fileID: 6831600181066885054}
   - component: {fileID: 3774706969913540102}
   m_Layer: 0
   m_Name: Fast Runner
@@ -161,19 +160,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6831600181066885054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4352334328084523397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb1b3e4b07ed9439613197b90b6ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemihealth: 4
 --- !u!114 &3774706969913540102
 MonoBehaviour:
   m_ObjectHideFlags: 0

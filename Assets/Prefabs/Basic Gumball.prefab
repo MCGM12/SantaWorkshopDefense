@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 9023881154926442355}
   - component: {fileID: 2572396721105990546}
   - component: {fileID: 7627529707286663036}
-  - component: {fileID: 603674356335486557}
   - component: {fileID: 5435203868299963233}
   m_Layer: 0
   m_Name: Basic Gumball
@@ -243,19 +242,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &603674356335486557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935053569378319419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90fb1b3e4b07ed9439613197b90b6ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemihealth: 10
 --- !u!114 &5435203868299963233
 MonoBehaviour:
   m_ObjectHideFlags: 0
