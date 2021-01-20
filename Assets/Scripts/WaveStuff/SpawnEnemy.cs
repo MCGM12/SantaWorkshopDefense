@@ -36,6 +36,7 @@ public class Wave
 {
     public GameObject enemyPrefab;
     public GameObject enemyPrefab2;
+    public GameObject enemyPrefab3;
     public float spawnInterval = 2;
     public int maxEnemies = 20;
 }
@@ -53,8 +54,9 @@ public class SpawnEnemy : MonoBehaviour
     private float lastSpawnTime;
     [SerializeField]private int enemiesSpawned = 0;
     [SerializeField]private int enemiesSpawned2 = 0;
+    [SerializeField]private int enemiesSpawned3 = 0;
 
-    // Use this for initialization
+    
     void Start()
     {
         //waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
@@ -66,9 +68,17 @@ public class SpawnEnemy : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
+
+        //If you want to do anything about specific waves.....
+        //
+        // do " if(currentWave >= (wave))
+        //         { stuff here }
+        //
+       
+
         // 1
         int currentWave = gameManager.Wave;
         if (currentWave < waves.Length)
@@ -90,6 +100,13 @@ public class SpawnEnemy : MonoBehaviour
                     newEnemy2.GetComponent<MoveEnemy>().waypoints = waypoints;
                     enemiesSpawned2++;
                 }
+                if(waves[currentWave].enemyPrefab3 != null)
+                {
+                    GameObject newEnemy3 = (GameObject)Instantiate(waves[currentWave].enemyPrefab2);
+                    newEnemy3.GetComponent<MoveEnemy>().waypoints = waypoints;
+                    enemiesSpawned3++;
+                }
+
                 newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
                 enemiesSpawned++;
             }
@@ -103,6 +120,7 @@ public class SpawnEnemy : MonoBehaviour
                 gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
                 enemiesSpawned = 0;
                 enemiesSpawned2 = 0;
+                enemiesSpawned3 = 0;
                 lastSpawnTime = Time.time;
             }
             // 5 

@@ -247,48 +247,59 @@ MonoBehaviour:
       type: 3}
     enemyPrefab2: {fileID: 1935053569378319419, guid: 6c73a4a3058407e43ae52eafa89f2557,
       type: 3}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0.5
     maxEnemies: 10
   - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
       type: 3}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 1
     maxEnemies: 20
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   - enemyPrefab: {fileID: 0}
     enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
     spawnInterval: 0
     maxEnemies: 0
   timeBetweenWaves: 4
   enemiesSpawned: 0
   enemiesSpawned2: 0
+  enemiesSpawned3: 0
 --- !u!114 &90209594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +315,8 @@ MonoBehaviour:
   goldLabel: {fileID: 0}
   waveLabel: {fileID: 0}
   gameOver: 0
+  healthLabel: {fileID: 0}
+  healthIndicator: []
 --- !u!4 &90209595
 Transform:
   m_ObjectHideFlags: 0
@@ -1202,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 9148073328041581611, guid: cd9db1db47c99e644a8efbee6aed0646,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9148073328041581611, guid: cd9db1db47c99e644a8efbee6aed0646,
         type: 3}

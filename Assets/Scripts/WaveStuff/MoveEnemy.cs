@@ -77,16 +77,20 @@ public class MoveEnemy : MonoBehaviour
                 //AudioSource audioSource = gameObject.GetComponent<AudioSource>();
                 //AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
                 // TODO: deduct health
+                GameManagerBehavior gameManager =
+    GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
+                gameManager.Health -= 1;
+
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "FinalWaypoint")
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.tag == "FinalWaypoint")
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
 }
