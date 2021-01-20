@@ -31,6 +31,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManagerBehavior : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class GameManagerBehavior : MonoBehaviour
     public Text goldLabel;
     private int gold;
     public Text waveLabel;
+    public GameObject gameOverImage;
     //public GameObject[] nextWaveLabels;
     public bool gameOver = false;
 
@@ -121,14 +123,18 @@ public class GameManagerBehavior : MonoBehaviour
     void Start()
     {
         Wave = 0;
-        Health = 5;
+        Health = 10;
         Gold = 1000;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (gameOver)
+        {
+            gameOverImage.SetActive(true);
+            //audio stuff if time?
+        }
     }
 
 }
