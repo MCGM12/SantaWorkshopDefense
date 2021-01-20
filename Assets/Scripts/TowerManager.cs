@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+
+
 
 public class TowerManager: MonoBehaviour
 {/*
@@ -38,8 +40,80 @@ public class TowerManager: MonoBehaviour
         towerBtnPressed = towerSelected;
         Debug.Log("Pressed" + towerBtnPressed.gameObject);
     }*/
+    // list to spawn towers 
+    public List<GameObject> Towers;
+    // transform To spawn towers 
+    public Transform spawnTowerRoot;
+    // id of Tower to spawn 
+    int spawnID = -1 ;
+    // Invisible floor 
+    public Tilemap InvisibleFloor;
 
+    // Basic UI List to make ui highlight
+    public List<Image> towerUI;
 
+    void Update()
+    {
+        if (WillSpawn())
+        DetectInvisibleFloor();
+    }
+    bool WillSpawn()
+    {
+        if (spawnID == -1)
+            return false;
+        else return true;
+    }
+
+    void DetectInvisibleFloor()
+    {
+        if(Input.GetMouseButtonDown(0))
+        { 
+        //Get Pos of mouse
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Get Pos of Cell In tile Map 
+       var cellPosDefualt =InvisibleFloor.WorldToCell(mousePos);
+
+            // Get Center Pos Of cell
+            var cellPosCenter = InvisibleFloor.GetCellCenterWorld(cellPosDefualt);
+        // Check if we can spawn there 
+        if(InvisibleFloor.GetColliderType(cellPosDefualt)== Tile.ColliderType.Sprite)
+            {
+                //Spawn tower
+                SpawnTower(cellPosCenter);
+            //Disable the collider on the tiles  
+                InvisibleFloor.SetColliderType(cellPosDefualt, Tile.ColliderType.None);
+            }
+           
+
+        // if yes spawn and disable Colider
+        // if No do Nada Zero zip Nothing
+        
+        }
+    }
+    void SpawnTower(Vector3 position)
+    {
+        GameObject tower = Instantiate(Towers[spawnID],spawnTowerRoot);
+        tower.transform.position = position;
+        DeselectTower();
+    }
+    public void SelectTower(int id)
+    {
+        DeselectTower();
+        spawnID = id;
+        //Highlight the Tower
+        towerUI[spawnID].color = Color.white;
+    }
+
+    public void DeselectTower()
+    {
+        spawnID = -1;
+
+        foreach(var t in towerUI)
+        {
+            t.color = new Color(.5f, .5f, .5f);
+        }
+
+    }
         
     }
 

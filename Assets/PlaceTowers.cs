@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlaceTowers : MonoBehaviour
 {
-    public GameObject TowersPrefab;
-    private GameObject [] Tower;
-  
+    public  GameObject  TowersPrefab;
+    private GameObject Tower;
+    public GameObject[] Towers;
+    int Towercounter = 0;
+
     private bool CanPlaceTower()
     {
         return Tower == null;
@@ -16,22 +18,21 @@ public class PlaceTowers : MonoBehaviour
     {
         if (CanPlaceTower())
         {
-           
-                Instantiate(TowersPrefab, transform.position, Quaternion.identity);
+            Tower =Instantiate(TowersPrefab, transform.position, Quaternion.identity);
 
         }
     }
-    public GameObject[] Towers;
-    int Towercounter = 0;
+   
 
-    void Start()
+
+  /*  void Start()
     {
-        Towers[0].SetActive(true);
+        Towers[0].SetActive(false);
 
     }
 
     // Update is called once per frame
-    void Update()
+  void Update()
     {
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
@@ -54,7 +55,7 @@ public class PlaceTowers : MonoBehaviour
         {
             Towercounter = 1;
 
-            for (int i = 0; i < Towers.Length; i++)
+            for (int i = 1; i < Towers.Length; i++)
             {
                 if (i != Towercounter)
 
@@ -68,7 +69,7 @@ public class PlaceTowers : MonoBehaviour
         {
             Towercounter = 2;
 
-            for (int i = 0; i < Towers.Length; i++)
+            for (int i = 2; i < Towers.Length; i++)
             {
                 if (i != Towercounter)
 
@@ -78,5 +79,5 @@ public class PlaceTowers : MonoBehaviour
                     Towers[i].SetActive(true);
             }
         }
-    }
+    }*/
 }
