@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class TowerManager: MonoBehaviour
-{
+{/*
     TowerBnt towerBtnPressed;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class TowerManager: MonoBehaviour
 
         }
     }
-    public void PlaceTower(RaycastHit2D hit)
+    //public void PlaceTower(RaycastHit2D hit)
     {
         if(!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed !=null )
         {
@@ -36,5 +37,62 @@ public class TowerManager: MonoBehaviour
     {
         towerBtnPressed = towerSelected;
         Debug.Log("Pressed" + towerBtnPressed.gameObject);
+    }*/
+
+
+   [ RequireComponent(typeof(Collider2D))]
+public class SingleTowerPlacementArea : MonoBehaviour
+    {
+
+
+        public GameObject PlacementTilePrefab;
+
+        
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

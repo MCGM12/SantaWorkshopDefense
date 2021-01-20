@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerBnt : MonoBehaviour
-{
-    [SerializeField]
-    GameObject towerObject;
-    public GameObject TowerObject
+{/*
+    private TowerInfo TowerInfo  ;
+
+    private TowerBuilder towerBuilder;
+    public TowerType towerType; // Set in inspector for each button
+
+    void Awake()
     {
-        get
-        {
-            return towerObject;
-        }
+        towerBuilder = FindObjectOfType<TowerBuilder>();
     }
+
+    public void SetBuildType()
+    {
+        towerBuilder.SetBuildType(buildTypeSelector.towerType);
+    }
+    */
 }
+
+
+
+
