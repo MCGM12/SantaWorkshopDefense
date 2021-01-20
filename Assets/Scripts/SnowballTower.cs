@@ -8,6 +8,7 @@ public class SnowballTower : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private float TimeBetweenShots; //How long it takes to shot and to shoot again 
     [SerializeField] private float NextTimeToShoot;
+    [SerializeField] private float moveSpeed;
     GameObject[] gos;
     private GameObject closest;
 
@@ -45,19 +46,23 @@ public class SnowballTower : MonoBehaviour
         GameObject newSnowBall = Instantiate(snowball);
         Vector3 startPosition = gameObject.transform.position;
         Vector3 endPosition = currentTarget.transform.position;
-        newSnowBall.transform.position = Vector2.Lerp(startPosition, endPosition, 1);
-        if(this.tag == "SnowballShooter")
-        {
-            newSnowBall.GetComponent<Snowball>().snowball = true;
-        }
-        else if (this.tag == "FastShooter")
-        {
-            newSnowBall.GetComponent<Snowball>().fast = true;
-        }
+
+        //if(this.tag == "SnowballShooter")
+        //{
+        //    newSnowBall.GetComponent<Snowball>().snowball = true;
+        //}
+        //else if (this.tag == "FastShooter")
+        //{
+        //    newSnowBall.GetComponent<Snowball>().fast = true;
+        //}
+        newSnowBall.transform.position = this.transform.position;
         
-       
-        
-        
+        newSnowBall.GetComponent<Snowball>().startPos = startPosition;
+        newSnowBall.GetComponent<Snowball>().endPos = endPosition;
+        newSnowBall.GetComponent<Snowball>().moveSpeed = moveSpeed;
+
+
+
     }
 
 

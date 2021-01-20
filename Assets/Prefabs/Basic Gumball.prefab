@@ -257,3 +257,4 @@ MonoBehaviour:
   waypointDisplay: []
   waypoints: []
   speed: 3
+  health: 2

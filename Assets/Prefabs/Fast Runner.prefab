@@ -175,6 +175,7 @@ MonoBehaviour:
   waypointDisplay: []
   waypoints: []
   speed: 5
+  health: 1
 --- !u!1 &6958777633816126396
 GameObject:
   m_ObjectHideFlags: 0

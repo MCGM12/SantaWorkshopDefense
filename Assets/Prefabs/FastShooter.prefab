@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2476851645436803081}
-  - component: {fileID: -7226245870213678412}
   - component: {fileID: 492208912460554310}
   m_Layer: 0
   m_Name: FastShooter
@@ -35,21 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-7226245870213678412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337564938084541659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 092f7c284ebcb4d4ab4301b23fcb7ef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pivot: {fileID: 4886256860260146867}
-  barrel: {fileID: 902793204321993521}
-  tower: {fileID: 0}
 --- !u!114 &492208912460554310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,8 +50,9 @@ MonoBehaviour:
   damage: 1
   TimeBetweenShots: 0.5
   NextTimeToShoot: 0
+  moveSpeed: 0
   currentTarget: {fileID: 0}
-  snowball: {fileID: 6903628048351894075, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+  snowball: {fileID: 1632301876467686153, guid: 2adc24cd132fb6d42b90d9712e899c71,
     type: 3}
 --- !u!1 &2983577657340781785
 GameObject:
