@@ -2,28 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlaceTowers : MonoBehaviour
+public class SwitchTowersa : MonoBehaviour
 {
-    public GameObject TowersPrefab;
-    private GameObject [] Tower;
-  
-    private bool CanPlaceTower()
-    {
-        return Tower == null;
-    }
-
-    private void OnMouseUp()
-    {
-        if (CanPlaceTower())
-        {
-           
-                Instantiate(TowersPrefab, transform.position, Quaternion.identity);
-
-        }
-    }
     public GameObject[] Towers;
     int Towercounter = 0;
-
+  
     void Start()
     {
         Towers[0].SetActive(true);

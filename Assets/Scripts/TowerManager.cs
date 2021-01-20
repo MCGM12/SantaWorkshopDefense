@@ -40,13 +40,6 @@ public class TowerManager: MonoBehaviour
     }*/
 
 
-   [ RequireComponent(typeof(Collider2D))]
-public class SingleTowerPlacementArea : MonoBehaviour
-    {
-
-
-        public GameObject PlacementTilePrefab;
-
         
     }
 
@@ -95,4 +88,4 @@ public class SingleTowerPlacementArea : MonoBehaviour
 
 
 
-}
+
