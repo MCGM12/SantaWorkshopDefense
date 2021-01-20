@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseBtn : MonoBehaviour
 {
@@ -23,5 +24,7 @@ public class PauseBtn : MonoBehaviour
     public void LoadMenu()
     {
         Debug.Log("loading Menu ....");
+        SceneManager.LoadScene("MainMenu");
     }
+    
 }

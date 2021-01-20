@@ -201,9 +201,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6238114703646158414}
-  - component: {fileID: 6238114703646158415}
-  - component: {fileID: 1088735426656445778}
   - component: {fileID: 5806545134350493936}
+  - component: {fileID: 2502807919562478336}
   m_Layer: 9
   m_Name: SnowballTower
   m_TagString: Player
@@ -228,41 +227,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6238114703646158415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6238114703646158409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de2afe16290efb4b874ec72b0b327c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 20
-  damage: 10
-  TimeBetweenShots: 0.5
-  NextTimeToShoot: 1
-  currentTarget: {fileID: 0}
-  pivot: {fileID: 6238114703429928275}
-  barrel: {fileID: 6704751650899797941}
-  Snowball: {fileID: 1889625065112884833, guid: f047a3a4cd2f3074ab429fc6f8f2b892,
-    type: 3}
---- !u!114 &1088735426656445778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6238114703646158409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be0a809a5db4f2428ad708889805f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SnowBallShooter: {fileID: 6238114703429928275}
-  tower: {fileID: 6238114703646158415}
 --- !u!114 &5806545134350493936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,4 +241,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 6238114703429928275}
   barrel: {fileID: 6704751650899797941}
-  tower: {fileID: 6238114703646158415}
+  tower: {fileID: 0}
+--- !u!114 &2502807919562478336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238114703646158409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff501a9dab1f1974797b348636ca7318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 20
+  damage: 2
+  TimeBetweenShots: 1
+  NextTimeToShoot: 0
+  currentTarget: {fileID: 0}
+  snowball: {fileID: 6903628048351894075, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+    type: 3}

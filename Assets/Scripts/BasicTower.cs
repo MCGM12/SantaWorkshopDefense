@@ -16,4 +16,8 @@ public class BasicTower : SnowballTower
 
         //Debug.Log("Shoot");
     }
+    private void Update()
+    {
+        base.Update();
+    }
 }

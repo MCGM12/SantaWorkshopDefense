@@ -12,6 +12,7 @@ public class SnowballTower : MonoBehaviour
     private GameObject closest;
 
     public GameObject currentTarget;
+    public GameObject snowball;
     private void Start()
     {
         NextTimeToShoot = Time.time;
@@ -19,31 +20,7 @@ public class SnowballTower : MonoBehaviour
 
 
 
-    //public void UdateNearestEnemy()
-    //{
-    //    GameObject CurrentNearestEnemy = null;
-    //    float distance = Mathf.Infinity;
 
-    //    foreach( GameObject enemy in EnCount.enemies)
-    //    {
-    //        float _distance = (transform.position - enemy.transform.position).magnitude;
-    //        if (_distance < distance)
-    //        {
-    //            distance = _distance;
-    //            CurrentNearestEnemy = enemy;
-    //        }
-    //    }
-    //    if (distance <= range)
-    //    {
-    //        currentTarget = CurrentNearestEnemy;
-    //        Debug.Log("Enemy(Runner) spotted");
-    //    }
-    //    else
-    //    {
-    //        currentTarget = null; 
-    //    }
-        
-    //}
     public GameObject FindClosestEnemy()
     {
         gos = GameObject.FindGameObjectsWithTag("Enemy");
@@ -64,17 +41,27 @@ public class SnowballTower : MonoBehaviour
     }
     protected virtual void Shoot()
     {
-     
-        
-            Enemie enemyScript = currentTarget.GetComponent<Enemie>();
-
-            enemyScript.takeDamage(damage);
         Debug.Log("Shoot");
+        GameObject newSnowBall = Instantiate(snowball);
+        Vector3 startPosition = gameObject.transform.position;
+        Vector3 endPosition = currentTarget.transform.position;
+        newSnowBall.transform.position = Vector2.Lerp(startPosition, endPosition, 1);
+        if(this.tag == "SnowballShooter")
+        {
+            newSnowBall.GetComponent<Snowball>().snowball = true;
+        }
+        else if (this.tag == "FastShooter")
+        {
+            newSnowBall.GetComponent<Snowball>().fast = true;
+        }
+        
+       
+        
         
     }
 
 
-    private void Update()
+    public void Update()
     {
         FindClosestEnemy();
         currentTarget = closest;

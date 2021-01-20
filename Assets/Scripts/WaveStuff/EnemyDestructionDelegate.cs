@@ -30,20 +30,31 @@
 
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class GameOver : MonoBehaviour
+public class EnemyDestructionDelegate : MonoBehaviour
 {
-    private void Update()
+
+    public delegate void EnemyDelegate(GameObject enemy);
+    public EnemyDelegate enemyDelegate;
+
+    // Use this for initialization
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RestartLevel();
-        }
+
     }
-    void RestartLevel()
+
+    // Update is called once per frame
+    void Update()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
+    void OnDestroy()
+    {
+        if (enemyDelegate != null)
+        {
+            enemyDelegate(gameObject);
+        }
     }
 
 }

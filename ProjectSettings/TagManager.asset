@@ -11,6 +11,10 @@ TagManager:
   - GameManager
   - Waypoint
   - FinalWaypoint
+  - GameOver
+  - GameWon
+  - FastTower
+  - SnowballTower
   layers:
   - Default
   - TransparentFX

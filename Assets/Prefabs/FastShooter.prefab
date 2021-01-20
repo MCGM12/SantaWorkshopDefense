@@ -9,12 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2476851645436803081}
-  - component: {fileID: 5675701943654099101}
-  - component: {fileID: 6049516217905227890}
   - component: {fileID: -7226245870213678412}
+  - component: {fileID: 492208912460554310}
   m_Layer: 0
   m_Name: FastShooter
-  m_TagString: Player
+  m_TagString: FastTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,42 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5675701943654099101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337564938084541659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4de2afe16290efb4b874ec72b0b327c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 10
-  damage: 5
-  TimeBetweenShots: 0.5
-  NextTimeToShoot: 0.5
-  currentTarget: {fileID: 0}
-  pivot: {fileID: 4886256860260146867}
-  barrel: {fileID: 902793204321993521}
-  Snowball: {fileID: 1889625065112884833, guid: f047a3a4cd2f3074ab429fc6f8f2b892,
-    type: 3}
---- !u!114 &6049516217905227890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 337564938084541659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be0a809a5db4f2428ad708889805f48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SnowBallShooter: {fileID: 8134295507225011532, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
-    type: 3}
-  tower: {fileID: 5675701943654099101}
 --- !u!114 &-7226245870213678412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +49,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivot: {fileID: 4886256860260146867}
   barrel: {fileID: 902793204321993521}
-  tower: {fileID: 5675701943654099101}
+  tower: {fileID: 0}
+--- !u!114 &492208912460554310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337564938084541659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff501a9dab1f1974797b348636ca7318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  damage: 1
+  TimeBetweenShots: 0.5
+  NextTimeToShoot: 0
+  currentTarget: {fileID: 0}
+  snowball: {fileID: 6903628048351894075, guid: f08e413f4ce8c7f469aa056b96f1c8f8,
+    type: 3}
 --- !u!1 &2983577657340781785
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,6 +43,10 @@ public class GameManagerBehavior : MonoBehaviour
     //public GameObject[] nextWaveLabels;
     public bool gameOver = false;
     public Text gameOverText;
+    public Text gameOverText2;
+    
+    public Sprite healthUI1, healthUI2, healthUI3, healthUI4, healthUI5, healthUI6, healthUI7, healthUI8, healthUI9, healthUI10;
+    public Image healthUI;
 
     public int Gold
     {
@@ -100,13 +104,14 @@ public class GameManagerBehavior : MonoBehaviour
             if (health <= 0) // && !gameOver)
             {
                 gameOver = true;
-                //gameOverText = GameObject.FindGameObjectWithTag("GameOver");
-                gameOverText.text = "GAME OVER"; //SetActive(true); //.GetComponent<RectTransform>().transform.position = new Vector3(0, 70, 0);
+               
+                gameOverText.text = "GAME OVER";
+                gameOverText2.text = "Press R to Retry, M for main Menu"; 
                 Debug.Log("Ruh roh, no health left");
                 GameObject gameManager = GameObject.Find("GameManager");
                 gameManager.GetComponent<SpawnEnemy>().enabled = false;
 
-                //gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+                
             }
             // 4 
             for (int i = 0; i < healthIndicator.Length; i++)
@@ -138,6 +143,48 @@ public class GameManagerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health == 10)
+        {
+            healthUI.sprite = healthUI10;
+        }
+        else if (health == 9)
+        {
+            healthUI.sprite = healthUI9;
+        }
+        else if (health == 8)
+        {
+            healthUI.sprite = healthUI8;
+        }
+        else if (health == 7)
+        {
+            healthUI.sprite = healthUI7;
+        }
+        else if (health == 6)
+        {
+            healthUI.sprite = healthUI6;
+        }else if (health == 5)
+        {
+            healthUI.sprite = healthUI5;
+        }
+        else if(health == 4)
+        {
+            healthUI.sprite = healthUI4;
+        }
+        else if(health == 3)
+        {
+            healthUI.sprite = healthUI3;
+        }
+        else if(health == 2)
+        {
+            healthUI.sprite = healthUI2;
+        }
+        else if(health == 1)
+        {
+            healthUI.sprite = healthUI1;
+        }
+
+
+
         if (gameOver)
         {
             //gameOverImage.SetActive(true);

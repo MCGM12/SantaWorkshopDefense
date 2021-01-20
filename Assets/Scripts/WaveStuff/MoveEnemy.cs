@@ -39,6 +39,7 @@ public class MoveEnemy : MonoBehaviour
     private int currentWaypoint = 0;
     private float lastWaypointSwitchTime;
     public float speed = 1.0f;
+    public int health;
 
     // Use this for initialization
     void Start()
@@ -82,6 +83,10 @@ public class MoveEnemy : MonoBehaviour
                 gameManager.Health -= 1;
 
             }
+        }
+        if(health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 
