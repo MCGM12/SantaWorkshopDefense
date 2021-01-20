@@ -11,12 +11,13 @@ public class SnowballTower : MonoBehaviour
     [SerializeField] private float moveSpeed;
     GameObject[] gos;
     private GameObject closest;
-
+    private AudioSource ShootSound;
     public GameObject currentTarget;
     public GameObject snowball;
     private void Start()
     {
         NextTimeToShoot = Time.time;
+        ShootSound = GetComponent<AudioSource>();
     }
 
 
@@ -77,6 +78,7 @@ public class SnowballTower : MonoBehaviour
             {
                 Shoot();
                 NextTimeToShoot = Time.time + TimeBetweenShots;
+                ShootSound.Play();
             }
         }
         //if(Time.time >= NextTimeToShoot && Vector2.Distance(transform.position, currentTarget.transform.position) <= range)
