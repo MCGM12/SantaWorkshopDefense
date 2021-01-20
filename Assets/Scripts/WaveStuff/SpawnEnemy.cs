@@ -133,13 +133,12 @@ public class SpawnEnemy : MonoBehaviour
                 enemiesSpawned++;
             }
             // 4 
-            if (enemiesSpawned == waves[currentWave].maxEnemies - enemiesSpawned2 && 
-                enemiesSpawned2 == waves[currentWave].maxEnemies - enemiesSpawned &&
+            if (enemiesSpawned == waves[currentWave].maxEnemies &&
                 GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 gameManager.Wave++; wave++;
                 Debug.Log("Wave is " + gameManager.Wave);
-                gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
+                //gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
                 enemiesSpawned = 0;
                 enemiesSpawned2 = 0;
                 enemiesSpawned3 = 0;
@@ -152,6 +151,10 @@ public class SpawnEnemy : MonoBehaviour
             gameManager.gameOver = true;
             //GameObject gameOverText = GameObject.FindGameObjectWithTag("GameWon");
             //gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+        }
+        if (wave >= 10)
+        {
+            gameManager.gameWon = true;
         }
 
     }

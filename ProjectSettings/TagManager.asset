@@ -15,6 +15,7 @@ TagManager:
   - GameWon
   - FastTower
   - SnowballTower
+  - FreezeTower
   layers:
   - Default
   - TransparentFX

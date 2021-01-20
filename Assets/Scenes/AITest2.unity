@@ -470,58 +470,58 @@ MonoBehaviour:
     enemyPrefab2: {fileID: 1935053569378319419, guid: 6c73a4a3058407e43ae52eafa89f2557,
       type: 3}
     enemyPrefab3: {fileID: 0}
-    spawnInterval: 1
+    spawnInterval: 0.5
     maxEnemies: 20
   - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
       type: 3}
     enemyPrefab2: {fileID: 1935053569378319419, guid: 6c73a4a3058407e43ae52eafa89f2557,
       type: 3}
     enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
-    maxEnemies: 25
+    spawnInterval: 0.5
+    maxEnemies: 20
   - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
       type: 3}
     enemyPrefab2: {fileID: 1935053569378319419, guid: 6c73a4a3058407e43ae52eafa89f2557,
       type: 3}
     enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
+    spawnInterval: 0.5
+    maxEnemies: 25
+  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
+      type: 3}
+    enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
+    spawnInterval: 0.5
+    maxEnemies: 25
+  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
+      type: 3}
+    enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
+    spawnInterval: 0.5
     maxEnemies: 30
   - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
       type: 3}
     enemyPrefab2: {fileID: 0}
     enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
+    spawnInterval: 0.5
+    maxEnemies: 30
+  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
+      type: 3}
+    enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
+    spawnInterval: 0.5
     maxEnemies: 35
   - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
       type: 3}
     enemyPrefab2: {fileID: 0}
     enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
+    spawnInterval: 0.5
+    maxEnemies: 35
+  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
+      type: 3}
+    enemyPrefab2: {fileID: 0}
+    enemyPrefab3: {fileID: 0}
+    spawnInterval: 0.5
     maxEnemies: 40
-  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
-      type: 3}
-    enemyPrefab2: {fileID: 0}
-    enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
-    maxEnemies: 45
-  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
-      type: 3}
-    enemyPrefab2: {fileID: 0}
-    enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
-    maxEnemies: 50
-  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
-      type: 3}
-    enemyPrefab2: {fileID: 0}
-    enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
-    maxEnemies: 0
-  - enemyPrefab: {fileID: 4352334328084523397, guid: 17741f8951b1f5945b91d68f3cffd51c,
-      type: 3}
-    enemyPrefab2: {fileID: 0}
-    enemyPrefab3: {fileID: 0}
-    spawnInterval: 0
-    maxEnemies: 0
   timeBetweenWaves: 4
   wave: 0
   enemiesSpawned: 0
@@ -543,8 +543,10 @@ MonoBehaviour:
   waveLabel: {fileID: 0}
   gameOverImage: {fileID: 384464756}
   gameOver: 0
+  gameWon: 0
   gameOverText: {fileID: 384464759}
   gameOverText2: {fileID: 193196439}
+  waveText: {fileID: 1032404468}
   healthUI1: {fileID: -8128141177624770686, guid: 5c22a479a47b36148ac6d32ae3b08a8b,
     type: 3}
   healthUI2: {fileID: 5966370575965500985, guid: 5c22a479a47b36148ac6d32ae3b08a8b,
@@ -1388,11 +1390,11 @@ GameObject:
   - component: {fileID: 1032404467}
   m_Layer: 0
   m_Name: Wave
-  m_TagString: GameOver
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1032404466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1409,7 +1411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -804, y: 401.4}
+  m_AnchoredPosition: {x: -766.8, y: 401.4}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1032404467

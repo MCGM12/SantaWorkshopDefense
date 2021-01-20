@@ -42,8 +42,10 @@ public class GameManagerBehavior : MonoBehaviour
     public GameObject gameOverImage;
     //public GameObject[] nextWaveLabels;
     public bool gameOver = false;
+    public bool gameWon = false;
     public Text gameOverText;
     public Text gameOverText2;
+    public Text waveText;
     
     public Sprite healthUI1, healthUI2, healthUI3, healthUI4, healthUI5, healthUI6, healthUI7, healthUI8, healthUI9, healthUI10;
     public Image healthUI;
@@ -143,6 +145,12 @@ public class GameManagerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(gameWon)
+        {
+            gameOverText.text = "GAME WON!";
+            gameOverText2.text = "Press R to Replay, M for main Menu";
+            Time.timeScale = 0.0f;
+        }
         if(health == 10)
         {
             healthUI.sprite = healthUI10;

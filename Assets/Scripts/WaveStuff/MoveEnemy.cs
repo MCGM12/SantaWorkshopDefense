@@ -38,12 +38,14 @@ public class MoveEnemy : MonoBehaviour
     public GameObject[] waypoints;
     private int currentWaypoint = 0;
     private float lastWaypointSwitchTime;
-    public float speed = 1.0f;
+    public float speed;
+    public float ogSpeed;
     public int health;
 
     // Use this for initialization
     void Start()
     {
+        ogSpeed = speed;
         lastWaypointSwitchTime = Time.time;
     }
 
@@ -90,12 +92,19 @@ public class MoveEnemy : MonoBehaviour
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if(collision.tag == "FinalWaypoint")
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "FreezeTower")
+        {
+            speed = speed / 2;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "FreezeTower")
+        {
+            speed = ogSpeed;
+        }
+    }
 
 }
