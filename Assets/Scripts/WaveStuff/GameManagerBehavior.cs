@@ -42,6 +42,7 @@ public class GameManagerBehavior : MonoBehaviour
     public GameObject gameOverImage;
     //public GameObject[] nextWaveLabels;
     public bool gameOver = false;
+    public Text gameOverText;
 
     public int Gold
     {
@@ -78,7 +79,7 @@ public class GameManagerBehavior : MonoBehaviour
     public Text healthLabel;
     public GameObject[] healthIndicator;
 
-    private int health;
+    [SerializeField]private int health;
     public int Health
     {
         get
@@ -94,13 +95,18 @@ public class GameManagerBehavior : MonoBehaviour
             }
             // 2
             health = value;
-            healthLabel.text = "HEALTH: " + health;
+            //healthLabel.text = "HEALTH: " + health;
             // 3
-            if (health <= 0 && !gameOver)
+            if (health <= 0) // && !gameOver)
             {
                 gameOver = true;
-                GameObject gameOverText = GameObject.FindGameObjectWithTag("GameOver");
-                gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
+                //gameOverText = GameObject.FindGameObjectWithTag("GameOver");
+                gameOverText.text = "GAME OVER"; //SetActive(true); //.GetComponent<RectTransform>().transform.position = new Vector3(0, 70, 0);
+                Debug.Log("Ruh roh, no health left");
+                GameObject gameManager = GameObject.Find("GameManager");
+                gameManager.GetComponent<SpawnEnemy>().enabled = false;
+
+                //gameOverText.GetComponent<Animator>().SetBool("gameOver", true);
             }
             // 4 
             for (int i = 0; i < healthIndicator.Length; i++)
@@ -122,8 +128,10 @@ public class GameManagerBehavior : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //gameOverText = GameObject.FindGameObjectWithTag("GameOver");
         Wave = 0;
         Health = 10;
+        gameOver = false;
         Gold = 1000;
     }
 
@@ -132,7 +140,7 @@ public class GameManagerBehavior : MonoBehaviour
     {
         if (gameOver)
         {
-            gameOverImage.SetActive(true);
+            //gameOverImage.SetActive(true);
             //audio stuff if time?
         }
     }

@@ -48,7 +48,7 @@ public class SpawnEnemy : MonoBehaviour
     public GameObject testEnemyPrefab;
     public Wave[] waves;
     public int timeBetweenWaves = 5;
-
+    [SerializeField] private int wave;
     private GameManagerBehavior gameManager;
 
     private float lastSpawnTime;
@@ -65,7 +65,7 @@ public class SpawnEnemy : MonoBehaviour
         lastSpawnTime = Time.time;
         gameManager =
             GameObject.Find("GameManager").GetComponent<GameManagerBehavior>();
-
+        wave = 1;
     }
 
    
@@ -94,17 +94,39 @@ public class SpawnEnemy : MonoBehaviour
                 lastSpawnTime = Time.time;
                 GameObject newEnemy = (GameObject)
                     Instantiate(waves[currentWave].enemyPrefab);
-                if(waves[currentWave].enemyPrefab2 != null)
+                if (waves[currentWave].enemyPrefab2 != null)
                 {
                     GameObject newEnemy2 = (GameObject)Instantiate(waves[currentWave].enemyPrefab2);
                     newEnemy2.GetComponent<MoveEnemy>().waypoints = waypoints;
                     enemiesSpawned2++;
                 }
-                if(waves[currentWave].enemyPrefab3 != null)
+                if (waves[currentWave].enemyPrefab3 != null)
                 {
-                    GameObject newEnemy3 = (GameObject)Instantiate(waves[currentWave].enemyPrefab2);
-                    newEnemy3.GetComponent<MoveEnemy>().waypoints = waypoints;
-                    enemiesSpawned3++;
+                    if (enemiesSpawned3 <= 3 || wave == 5)
+                    {
+                        GameObject newEnemy3 = (GameObject)Instantiate(waves[currentWave].enemyPrefab3);
+                        newEnemy3.GetComponent<MoveEnemy>().waypoints = waypoints;
+                        enemiesSpawned3++;
+                    }
+                    else if (enemiesSpawned3 <= 5 || wave == 7)
+                    {
+                        GameObject newEnemy3 = (GameObject)Instantiate(waves[currentWave].enemyPrefab3);
+                        newEnemy3.GetComponent<MoveEnemy>().waypoints = waypoints;
+                        enemiesSpawned3++;
+                    }
+                    else if (enemiesSpawned3 <= 7 || wave == 9)
+                    {
+                        GameObject newEnemy3 = (GameObject)Instantiate(waves[currentWave].enemyPrefab3);
+                        newEnemy3.GetComponent<MoveEnemy>().waypoints = waypoints;
+                        enemiesSpawned3++;
+                    }
+                    else if (enemiesSpawned3 <= 10 || wave == 10)
+                    {
+                        GameObject newEnemy3 = (GameObject)Instantiate(waves[currentWave].enemyPrefab3);
+                        newEnemy3.GetComponent<MoveEnemy>().waypoints = waypoints;
+                        enemiesSpawned3++;
+                    }
+                    
                 }
 
                 newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
@@ -115,7 +137,7 @@ public class SpawnEnemy : MonoBehaviour
                 enemiesSpawned2 == waves[currentWave].maxEnemies - enemiesSpawned &&
                 GameObject.FindGameObjectWithTag("Enemy") == null)
             {
-                gameManager.Wave++;
+                gameManager.Wave++; wave++;
                 Debug.Log("Wave is " + gameManager.Wave);
                 gameManager.Gold = Mathf.RoundToInt(gameManager.Gold * 1.1f);
                 enemiesSpawned = 0;
