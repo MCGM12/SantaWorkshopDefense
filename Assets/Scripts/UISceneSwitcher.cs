@@ -19,6 +19,14 @@ public class UISceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
     public void Update()
     {

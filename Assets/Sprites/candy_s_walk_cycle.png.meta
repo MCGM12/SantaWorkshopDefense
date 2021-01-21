@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: 7de03f594537e9e47a59ea543f436b43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2704909218346007134
+    second: candy_s_walk_cycle_0
+  - first:
+      213: 8055075545578653604
+    second: candy_s_walk_cycle_1
+  - first:
+      213: 5635854181717191501
+    second: candy_s_walk_cycle_2
+  - first:
+      213: -2015591412571935121
+    second: candy_s_walk_cycle_3
+  - first:
+      213: 6119202621886597060
+    second: candy_s_walk_cycle_4
+  - first:
+      213: -3526446755260526443
+    second: candy_s_walk_cycle_5
+  - first:
+      213: 433584377013185456
+    second: candy_s_walk_cycle_6
+  - first:
+      213: -2165799444939178669
+    second: candy_s_walk_cycle_7
+  - first:
+      213: -1450391833485250419
+    second: candy_s_walk_cycle_8
+  - first:
+      213: -1923240819241085440
+    second: candy_s_walk_cycle_9
+  - first:
+      213: 8659809127835751514
+    second: candy_s_walk_cycle_10
+  - first:
+      213: -8999614521146639798
+    second: candy_s_walk_cycle_11
+  - first:
+      213: -2883161225276154925
+    second: candy_s_walk_cycle_12
+  - first:
+      213: 2007892208912492434
+    second: candy_s_walk_cycle_13
+  - first:
+      213: -1196530111770277326
+    second: candy_s_walk_cycle_14
+  - first:
+      213: 698228057369517216
+    second: candy_s_walk_cycle_15
+  - first:
+      213: -6264540685529372213
+    second: candy_s_walk_cycle_16
+  - first:
+      213: 7680405149488367074
+    second: candy_s_walk_cycle_17
+  - first:
+      213: -4335106909633836567
+    second: candy_s_walk_cycle_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 8528
+        width: 1154
+        height: 2330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a58ecaa56b367ad0800000000000000
+      internalID: -2704909218346007134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_1
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 8543
+        width: 1056
+        height: 2315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7c625f78069cf60800000000000000
+      internalID: 8055075545578653604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_2
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 8537
+        width: 1160
+        height: 2321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b272ba483963e40800000000000000
+      internalID: 5635854181717191501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_3
+      rect:
+        serializedVersion: 2
+        x: 4760
+        y: 8543
+        width: 1053
+        height: 2315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e62511a4e2704e0800000000000000
+      internalID: -2015591412571935121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 6196
+        width: 1401
+        height: 1906
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7803a1d56cbe450800000000000000
+      internalID: 6119202621886597060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_5
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 6217
+        width: 1401
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5901e592c5b8f0fc0800000000000000
+      internalID: -3526446755260526443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_6
+      rect:
+        serializedVersion: 2
+        x: 3074
+        y: 6196
+        width: 1402
+        height: 1917
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bba70491b6640600800000000000000
+      internalID: 433584377013185456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_7
+      rect:
+        serializedVersion: 2
+        x: 4605
+        y: 6217
+        width: 1396
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d79a531e881f1e0800000000000000
+      internalID: -2165799444939178669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3472
+        width: 1425
+        height: 1913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80fbfbdf4c2fdbe0800000000000000
+      internalID: -1450391833485250419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_9
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 4832
+        width: 132
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0069a972aa64f45e0800000000000000
+      internalID: -1923240819241085440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_10
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 3494
+        width: 1401
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54d5572582dd2870800000000000000
+      internalID: 8659809127835751514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_11
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 4808
+        width: 175
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a7b976642fa1380800000000000000
+      internalID: -8999614521146639798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_12
+      rect:
+        serializedVersion: 2
+        x: 3063
+        y: 3472
+        width: 1551
+        height: 1918
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db1c392424fcf7d0800000000000000
+      internalID: -2883161225276154925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_13
+      rect:
+        serializedVersion: 2
+        x: 4605
+        y: 3489
+        width: 1396
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297e08363577ddb10800000000000000
+      internalID: 2007892208912492434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_14
+      rect:
+        serializedVersion: 2
+        x: 5970
+        y: 4832
+        width: 130
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23acfdce332156fe0800000000000000
+      internalID: -1196530111770277326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 731
+        width: 1401
+        height: 1914
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac98b308ba90b900800000000000000
+      internalID: 698228057369517216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_16
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 749
+        width: 1396
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc92a0eff61ef09a0800000000000000
+      internalID: -6264540685529372213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_17
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 722
+        width: 1396
+        height: 1923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5c55a7ac7469a60800000000000000
+      internalID: 7680405149488367074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candy_s_walk_cycle_18
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 749
+        width: 1400
+        height: 1896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e90febeb3b96d3c0800000000000000
+      internalID: -4335106909633836567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

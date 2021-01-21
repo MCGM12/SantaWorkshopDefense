@@ -156,6 +156,10 @@ public class SpawnEnemy : MonoBehaviour
         {
             gameManager.gameWon = true;
         }
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            gameManager.gameWon = true;
+        }
 
     }
 
